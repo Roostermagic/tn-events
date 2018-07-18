@@ -1,0 +1,39 @@
+{
+  "name": "tn-events",
+  "version": "0.0.1",
+  "description": "The best way to organize events",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "husky": "0.14.3",
+    "lint-staged": "7.2.0",
+    "prettier": "1.13.7"
+  },
+  "scripts": {
+    "postinstall": "yarn postinstall:backend && yarn postinstall:frontend",
+    "postinstall:backend": "cd backend && yarn install",
+    "postinstall:frontend": "cd frontend && yarn install",
+    "precommit": "lint-staged && yarn precommit:backend && yarn precommit:frontend",
+    "precommit:backend": "cd backend && yarn run precommit",
+    "precommit:frontend": "cd frontend && yarn run precommit",
+    "lint": "yarn lint:backend && yarn lint:frontend",
+    "lint:backend": "cd backend && yarn run lint",
+    "lint:frontend": "cd frontend && yarn run lint"
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.json": [
+        "prettier --write",
+        "git add"
+      ],
+      "**/*.md": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "backend/**/*",
+      "frontend/**/*"
+    ]
+  }
+}

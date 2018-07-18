@@ -1,0 +1,32 @@
+{
+  "extends": ["airbnb-base", "prettier", "plugin:react/recommended"],
+  "plugins": ["import", "react"],
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "parser": "babel-eslint"
+  },
+  "rules": {
+    "comma-dangle": ["warn", "never"],
+    "arrow-parens": ["warn", "as-needed"],
+    "func-names": "off",
+    "max-len": ["warn", 120],
+    "no-confusing-arrow": ["error", { "allowParens": true }],
+    "object-curly-newline": "off",
+    "function-paren-newline": "off",
+    "import/newline-after-import": "warn",
+    "import/prefer-default-export": "warn",
+    "import/first": "off",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always"
+      }
+    ],
+    "space-before-function-paren": "off"
+  }
+}
