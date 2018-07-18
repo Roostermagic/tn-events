@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --legacy-watch --polling-interval 500 --watch src",
     "precommit": "lint-staged"
   },
   "repository": {
@@ -19,7 +20,8 @@
   },
   "homepage": "https://github.com/Roostermagic/tn-events#readme",
   "dependencies": {
-    "hapi": "17.5.2"
+    "hapi": "17.5.2",
+    "inert": "5.1.0"
   },
   "lint-staged": {
     "linters": {

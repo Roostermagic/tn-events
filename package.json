@@ -4,12 +4,18 @@
   "description": "The best way to organize events",
   "license": "UNLICENSED",
   "private": true,
+  "engines": {
+    "node": "8.11.3",
+    "yarn": "1.5.1"
+  },
   "devDependencies": {
     "husky": "0.14.3",
     "lint-staged": "7.2.0",
     "prettier": "1.13.7"
   },
   "scripts": {
+    "start": "cd backend && yarn start",
+    "heroku-postbuild": "cd frontend && yarn install && yarn build",
     "postinstall": "yarn postinstall:backend && yarn postinstall:frontend",
     "postinstall:backend": "cd backend && yarn install",
     "postinstall:frontend": "cd frontend && yarn install",
