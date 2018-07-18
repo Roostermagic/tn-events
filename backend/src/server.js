@@ -4,8 +4,8 @@ const Hapi = require('hapi');
 const inert = require('inert');
 
 const server = Hapi.server({
-  port: process.env.PORT || 3000,
-  host: 'localhost',
+  port: process.env.NODE_ENV === 'production' ? process.env.PORT : 3000,
+  host: '0.0.0.0',
   routes: {
     files: {
       relativeTo: Path.join(__dirname, '../../frontend/build')
