@@ -10,7 +10,7 @@ The best way to organize events
 -   Copy .env-sample to .env and fill in
 -   Install dependencies with `yarn install`
 -   Start the backend and database by running `docker-compose up`
--   Start the frontend dev-server by going to the frontend folder and running `npm start``
+-   Start the frontend dev-server by going to the frontend folder and running `yarn start`
 
 ## Guidelines
 

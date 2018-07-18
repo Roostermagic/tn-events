@@ -4,7 +4,7 @@ const Hapi = require('hapi');
 const inert = require('inert');
 
 const server = Hapi.server({
-  port: process.env.NODE_ENV === 'production' ? process.env.PORT : 3000,
+  port: process.env.PORT,
   host: '0.0.0.0',
   routes: {
     files: {
@@ -17,6 +17,12 @@ server.route({
   method: 'GET',
   path: '/',
   handler: (request, h) => h.file('index.html')
+});
+
+server.route({
+  method: 'GET',
+  path: '/hello',
+  handler: () => 'Hello'
 });
 
 const init = async () => {

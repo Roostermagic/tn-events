@@ -2,11 +2,11 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js --legacy-watch --polling-interval 500 --watch src",
+    "start": "node ./src/server.js",
+    "dev": "nodemon --watch ./src --legacy-watch --polling-interval 500 ./src/server.js",
     "precommit": "lint-staged"
   },
   "repository": {
@@ -21,7 +21,8 @@
   "homepage": "https://github.com/Roostermagic/tn-events#readme",
   "dependencies": {
     "hapi": "17.5.2",
-    "inert": "5.1.0"
+    "inert": "5.1.0",
+    "nodemon": "1.17.1"
   },
   "lint-staged": {
     "linters": {
@@ -44,7 +45,6 @@
     "eslint-plugin-import": "2.13.0",
     "eslint-plugin-react": "7.10.0",
     "lint-staged": "7.2.0",
-    "nodemon": "1.18.3",
     "prettier": "1.13.7"
   }
 }
