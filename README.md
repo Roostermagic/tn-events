@@ -2,6 +2,12 @@
 
 The best way to organize events
 
+## Build-status
+
+![Master build status](https://travis-ci.com/Roostermagic/tn-events.svg?branch=master>)
+
+![Dev build status](https://travis-ci.com/Roostermagic/tn-events.svg?branch=dev>)
+
 ## How to
 
 -   Use Node 8.11.3 (use NVM to manage)
