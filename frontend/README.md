@@ -1,3 +1,9 @@
+## Structure
+
+Components folder contains all reusable stateless/presentational components.
+Containers folder contains components that are stateful and are often used only once.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
