@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom'
-
-import 'typeface-roboto'
+import { BrowserRouter } from 'react-router-dom';
+import 'typeface-roboto';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import App from './App';
@@ -17,7 +16,8 @@ ReactDOM.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </MuiThemeProvider>
-, document.getElementById('root'));
+  </MuiThemeProvider>,
+  document.getElementById('root')
+);
 
 registerServiceWorker();
